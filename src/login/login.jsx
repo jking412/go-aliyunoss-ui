@@ -1,10 +1,23 @@
 import React from "react";
 import './login.css';
 import axios from 'axios';
+import qs from 'qs';
 
 const client = axios.create({
     baseURL: 'http://localhost:4000',
 });
+
+axios.interceptors.request.use(
+    config => {
+        if (config.method === 'post'){
+            config.data = qs.stringify(config.data);  
+        }
+    },
+    error => {
+        console.log(error);
+        return Promise.reject(error);
+    }
+)
 
 
 class Login extends React.Component{
