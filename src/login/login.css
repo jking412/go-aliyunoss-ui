@@ -1,0 +1,61 @@
+body{
+    background: url('./background.jpg'),no-repeat;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    background: rgba(242, 241, 241, 0.5);
+    border: 2px solid rgba(226, 216, 216);
+    border-radius: 10px;
+    width: 600px;
+    height: 300px;
+    margin-top: 300px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 203, 203);
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+label{
+    font-size: large;
+    color: rgb(157, 132, 132);
+}
+
+.btn{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 203, 203);
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    background: rgb(157, 132, 132);
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+
