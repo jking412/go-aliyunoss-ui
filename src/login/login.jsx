@@ -1,5 +1,10 @@
 import React from "react";
 import './login.css';
+import axios from 'axios';
+
+const client = axios.create({
+    baseURL: 'http://localhost:4000',
+});
 
 
 class Login extends React.Component{
@@ -9,6 +14,8 @@ class Login extends React.Component{
             username: '',
             password: ''
         }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     render(){
         return (
@@ -22,7 +29,7 @@ class Login extends React.Component{
                         <label>Password</label>
                         <input type="password" className="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
                     </div>
-                    <button type="submit" className="btn btn-primary">Login</button>
+                    <button type="submit" className="btn" onClick={this.handleSubmit}>Login</button>
                 </form>
             </div>
         );
@@ -30,6 +37,24 @@ class Login extends React.Component{
     handleChange = (e) => {
         const { name, value } = e.target;
         this.setState({ [name]: value });
+    }
+    //axios post username and passworp
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(this.state.username);
+        console.log(this.state.password);
+        client.post('/user/login', {
+            username: this.state.username,
+            password: this.state.password
+        })
+        .then(function (response) {
+            //json parse jwt
+            console.log(response.data.token);
+            localStorage.setItem('token', response.data.token);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 }
 

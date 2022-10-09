@@ -33,7 +33,12 @@ input{
     margin-left: 10px;
     margin-bottom: 10px;
     outline: none;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(216, 153, 58);
 }
+
+
 
 label{
     font-size: large;
