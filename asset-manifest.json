@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/go-aliyunoss-ui/static/css/main.43f662cf.css",
+    "main.js": "/go-aliyunoss-ui/static/js/main.8ff7bb31.js",
+    "static/js/787.75132bd2.chunk.js": "/go-aliyunoss-ui/static/js/787.75132bd2.chunk.js",
+    "static/media/background.jpg": "/go-aliyunoss-ui/static/media/background.8251b74e146965d9f6e0.jpg",
+    "index.html": "/go-aliyunoss-ui/index.html",
+    "main.43f662cf.css.map": "/go-aliyunoss-ui/static/css/main.43f662cf.css.map",
+    "main.8ff7bb31.js.map": "/go-aliyunoss-ui/static/js/main.8ff7bb31.js.map",
+    "787.75132bd2.chunk.js.map": "/go-aliyunoss-ui/static/js/787.75132bd2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43f662cf.css",
+    "static/js/main.8ff7bb31.js"
+  ]
+}
